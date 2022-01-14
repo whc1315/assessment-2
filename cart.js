@@ -36,9 +36,9 @@ const cart = [
 //CODE HERE
 
 
-// const summedPrice = cart.reduce((acc, price) => {return acc + price})
+const summedPrice = cart.reduce((acc, price) => {return acc + price})
 
-// console.log(summedPrice)
+console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -86,7 +86,7 @@ calcFinalPrice(20, 4, .06)
 /*
     TEXT ANSWER HERE
 
-    //A customer object needs a few things, name so we know the name, card info so we can receive payment, billing address to charge the card, email for an e receipt and offers, phone number to call if an error occurs.
+    A customer object needs a few things, name so we know the name, card info so we can receive payment, billing address to charge the card, email for an e receipt and offers, phone number to call if an error occurs.
 
 */
 
