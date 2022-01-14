@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -32,7 +31,14 @@
 
 //CODE HERE
 
-
+let pizza = {
+  name: "pepperoni",
+  price: 5,
+  category: "entree",
+  popularity: 8,
+  rating: 8,
+  tags: ["good", "tasty", "filling"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -44,6 +50,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +61,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -64,7 +72,8 @@
 
 //CODE HERE
 
-
+let { price } = pizza;
+console.log(price);
 /*
     Fourth, and last, destructure the category
     property.
@@ -74,6 +83,8 @@
 
 //CODE HERE
 
+let { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,7 +100,48 @@
 
 //CODE HERE
 
+let pizzas = {
+  name: "pepperoni",
+  price: 5,
+  category: "entree",
+  popularity: 8,
+  rating: 8,
+  tags: ["good", "tasty", "filling"],
+};
+let burger = {
+  name: "cheese",
+  price: 3,
+  category: "entree",
+  popularity: 7,
+  rating: 7,
+  tags: ["big", "gluten-free", "filling"],
+};
+let fries = {
+  name: "french",
+  price: 1,
+  category: "side",
+  popularity: 9,
+  rating: 9,
+  tags: ["snack", "salty", "potato"],
+};
+let burrito = {
+    name: 'bean',
+    price: 2,
+    category: 'entree',
+    popularity: 10,
+    rating: 10,
+    tags: ['gassy', 'magic', 'fruit']
+};
+let pbandj = {
+    name: 'sandwich',
+    price: 1,
+    category: 'entree',
+    popularity: 3,
+    rating: 3,
+    tags: ['simple', 'stale', 'small']
+};
 
+let foodArr = [pizzas, burger, fries, burrito, pbandj]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,8 +157,15 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+function tagBack (el){
+    if (el === 'stale'){
+        console.log(el)
+    }
+}
 
+    
+
+const filteredFood = foodArr.filter(tagBack)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -149,7 +208,6 @@
 */
 
 //CODE HERE
-
 
 /*
     Invoke the `filterByProperty` function passing

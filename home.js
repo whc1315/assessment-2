@@ -125,6 +125,12 @@ const deals = [
 
 //CODE HERE
 
+if (deals.includes("15%")) {
+    console.log(true)
+  } else {
+    console.log(false)
+  }
+
 /*
     The restaurant is going to continue its
     family deal for another month. 
