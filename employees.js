@@ -21,7 +21,15 @@
 
 //CODE HERE
 
-
+class Employee{
+    constructor(name, shifts){
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule(obj){
+        console.log(obj)
+    }
+}
 
 /*
     Create a new instance of your class.
