@@ -35,9 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
+// const summedPrice = cart.reduce((acc, price) => {return acc + price})
 
+// console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -55,7 +56,12 @@ const cart = [
 
 //CODE HERE
 
-
+function calcFinalPrice (cartTotal, couponValue, tax){
+    let grandTotal = ((cartTotal * tax) + cartTotal);
+    let finalTotal = (grandTotal - couponValue);
+    console.log(finalTotal)
+}
+calcFinalPrice(20, 4, .06)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,6 +86,8 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    //A customer object needs a few things, name so we know the name, card info so we can receive payment, billing address to charge the card, email for an e receipt and offers, phone number to call if an error occurs.
+
 */
 
 /*
@@ -88,3 +96,11 @@ const cart = [
 */
 
 //CODE HERE
+
+let customer ={
+    name: 'Tim Jones', //its a Name so its a string 
+    cardInfo: 837982, //its a Number for the Card number 
+    billingAddress: '12343 W Jones Rd', // its a string due to the combo of words and numbers 
+    email: 'tj789@gsnail.com', //String due to potential of numbers and letters 
+    phoneNumber: 83823456578 //lastly a number for the phone number
+}
