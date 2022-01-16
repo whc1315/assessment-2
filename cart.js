@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,26 +18,26 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
+const summedPrice = cart.reduce((total, amount) => total + amount.price, 0);
 
-const summedPrice = cart.reduce((acc, price) => {return acc + price})
+console.log(summedPrice);
 
-console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -56,12 +55,12 @@ console.log(summedPrice)
 
 //CODE HERE
 
-function calcFinalPrice (cartTotal, couponValue, tax){
-    let grandTotal = ((cartTotal * tax) + cartTotal);
-    let finalTotal = (grandTotal - couponValue);
-    console.log(finalTotal)
+function calcFinalPrice(cartTotal, couponValue, tax) {
+  let grandTotal = cartTotal * tax + cartTotal;
+  let finalTotal = grandTotal - couponValue;
+  console.log(finalTotal);
 }
-calcFinalPrice(20, 4, .06)
+calcFinalPrice(20, 4, 0.06);
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -97,10 +96,10 @@ calcFinalPrice(20, 4, .06)
 
 //CODE HERE
 
-let customer ={
-    name: 'Tim Jones', //its a Name so its a string 
-    cardInfo: 837982, //its a Number for the Card number 
-    billingAddress: '12343 W Jones Rd', // its a string due to the combo of words and numbers 
-    email: 'tj789@gsnail.com', //String due to potential of numbers and letters 
-    phoneNumber: 83823456578 //lastly a number for the phone number
-}
+let customer = {
+  name: "Tim Jones", //its a Name so its a string
+  cardInfo: 837982, //its a Number for the Card number
+  billingAddress: "12343 W Jones Rd", // its a string due to the combo of words and numbers
+  email: "tj789@gsnail.com", //String due to potential of numbers and letters
+  phoneNumber: 83823456578, //lastly a number for the phone number
+};

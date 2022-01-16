@@ -50,7 +50,7 @@ let pizza = {
 
 //CODE HERE
 
-console.log(pizza.popularity);
+// console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -61,7 +61,7 @@ console.log(pizza.popularity);
 
 //CODE HERE
 
-console.log(pizza.tags[1]);
+// console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -72,8 +72,8 @@ console.log(pizza.tags[1]);
 
 //CODE HERE
 
-let { price } = pizza;
-console.log(price);
+// let { price } = pizza;
+// console.log(price);
 /*
     Fourth, and last, destructure the category
     property.
@@ -83,8 +83,8 @@ console.log(price);
 
 //CODE HERE
 
-let { category } = pizza;
-console.log(category);
+// let { category } = pizza;
+// console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -125,23 +125,23 @@ let fries = {
   tags: ["snack", "salty", "potato"],
 };
 let burrito = {
-    name: 'bean',
-    price: 2,
-    category: 'entree',
-    popularity: 10,
-    rating: 10,
-    tags: ['gassy', 'magic', 'fruit']
+  name: "bean",
+  price: 2,
+  category: "entree",
+  popularity: 10,
+  rating: 10,
+  tags: ["gassy", "magic", "fruit"],
 };
 let pbandj = {
-    name: 'sandwich',
-    price: 1,
-    category: 'entree',
-    popularity: 3,
-    rating: 3,
-    tags: ['simple', 'stale', 'small']
+  name: "sandwich",
+  price: 1,
+  category: "entree",
+  popularity: 3,
+  rating: 3,
+  tags: ["simple", "stale", "small"],
 };
 
-let foodArr = [pizzas, burger, fries, burrito, pbandj]
+let foodArr = [pizzas, burger, fries, burrito, pbandj];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -157,16 +157,13 @@ let foodArr = [pizzas, burger, fries, burrito, pbandj]
 
 //CODE HERE
 
-function tagBack (el){
-    if (el === 'stale'){
-        console.log(el)
-    }
-}
+const tagBack = foodArr.filter((foodObj) => {
+  if (foodObj.tags.includes("gassy")) {
+    return true;
+  }
+});
 
-    
-
-const filteredFood = foodArr.filter(tagBack)
-
+// console.log(tagBack);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -209,11 +206,24 @@ const filteredFood = foodArr.filter(tagBack)
 
 //CODE HERE
 
-/*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+function filterByProperty(property, number, type) {
+  const filtered = foodArr.filter(function (foodObj) {
+    if (type === "above") {
+      return foodObj[property] > number;
+    } else {
+      return foodObj[property] < number;
+    }
+  });
+  console.log(filtered);
+}
 
-    You'll have to console.log to see the filtered array
+/*
+Invoke the `filterByProperty` function passing
+in a value for each paramter.
+
+You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+
+filterByProperty("popularity", 7, "above");

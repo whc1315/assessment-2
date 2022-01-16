@@ -82,7 +82,7 @@ canWeDeliver(85213);
 function canWeDeliver2(zip) {
   for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
     if (deliveryAreaZipCodes[i] === zip) {
-      return console.log ("Youre in the pasta zone!");
+      return console.log("Youre in the pasta zone!");
     } else {
     }
   }
@@ -125,11 +125,11 @@ const deals = [
 
 //CODE HERE
 
-if (deals.includes("15%")) {
-    console.log(true)
-  } else {
-    console.log(false)
-  }
+let newDeal = deals[0].title.replace("15", "10");
+
+deals[0].title = newDeal;
+
+console.log(deals[0]);
 
 /*
     The restaurant is going to continue its
@@ -145,3 +145,8 @@ if (deals.includes("15%")) {
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace("March", "April");
+deals[1].desc = deals[1].desc.trim();
+
+console.log(deals[1]);
